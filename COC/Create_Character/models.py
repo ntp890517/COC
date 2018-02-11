@@ -73,7 +73,7 @@ class SkillCategory(models.Model):
 
 class Skill(models.Model):
     id = models.AutoField(primary_key = True)
-    category = models.OneToOneField(SkillCategory)
+    category = models.OneToOneField(SkillCategory, on_delete=models.PROTECT)
     name = models.CharField(max_length = 125)
 
     initialValue = models.PositiveSmallIntegerField(validators = [MaxValueValidator(99)])
@@ -96,7 +96,7 @@ class WeaponCategory(models.Model):
 
 class Weapon(models.Model):
     id = models.AutoField(primary_key = True)
-    category = models.OneToOneField(WeaponCategory)
+    category = models.OneToOneField(WeaponCategory, on_delete=models.PROTECT)
     name = models.CharField(max_length = 125)
 
     relatedSkill = models.CharField(max_length = 125)
