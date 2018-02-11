@@ -68,7 +68,7 @@ class Character(models.Model):
     mobility = models.PositiveSmallIntegerField()
 
 class SkillCategory(models.Model):
-    id = models.AutoField(primary_key=True)
+    id = models.AutoField(primary_key = True)
     name = models.CharField(max_length = 125)
 
 class Skill(models.Model):
@@ -80,3 +80,31 @@ class Skill(models.Model):
     normalSuccessLevel = models.PositiveSmallIntegerField(validators = [MaxValueValidator(99)])
     hardSuccessLevel = models.PositiveSmallIntegerField(validators = [MaxValueValidator(99)])
     extremeSuccessLevel = models.PositiveSmallIntegerField(validators = [MaxValueValidator(99)])
+
+class Job(models.Model):
+    id = models.AutoField(primary_key = True)
+    name = models.CharField(max_length = 125)
+
+    relatedProperties = models.CharField(max_length = 125)
+    relatedSkills = models.CharField(max_length = 125)
+
+    reputation = models.PositiveSmallIntegerField(validators = [MaxValueValidator(99)])
+
+class WeaponCategory(models.Model):
+    id = models.AutoField(primary_key = True)
+    name = models.CharField(max_length = 125)
+
+class Weapon(models.Model):
+    id = models.AutoField(primary_key = True)
+    category = models.OneToOneField(WeaponCategory)
+    name = models.CharField(max_length = 125)
+
+    relatedSkill = models.CharField(max_length = 125)
+    damage = models.CharField(max_length = 125)
+    range = models.CharField(max_length = 125)
+    isPiercingInjury = models.BooleanField()
+    consecutiveLimit = models.PositiveSmallIntegerField(validators=[MaxValueValidator(99)])
+    load = models.PositiveSmallIntegerField()
+    price = models.PositiveIntegerField()
+    firmness = models.PositiveSmallIntegerField(validators=[MaxValueValidator(99)])
+    presentEra = models.CharField(max_length = 125)
