@@ -66,3 +66,17 @@ class Character(models.Model):
     build = models.SmallIntegerField()
     damageBreak = models.PositiveSmallIntegerField()
     mobility = models.PositiveSmallIntegerField()
+
+class SkillCategory(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length = 125)
+
+class Skill(models.Model):
+    id = models.AutoField(primary_key = True)
+    category = models.OneToOneField(SkillCategory)
+    name = models.CharField(max_length = 125)
+
+    initialValue = models.PositiveSmallIntegerField(validators = [MaxValueValidator(99)])
+    normalSuccessLevel = models.PositiveSmallIntegerField(validators = [MaxValueValidator(99)])
+    hardSuccessLevel = models.PositiveSmallIntegerField(validators = [MaxValueValidator(99)])
+    extremeSuccessLevel = models.PositiveSmallIntegerField(validators = [MaxValueValidator(99)])
