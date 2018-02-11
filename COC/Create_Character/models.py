@@ -67,9 +67,15 @@ class Character(models.Model):
     damageBreak = models.PositiveSmallIntegerField()
     mobility = models.PositiveSmallIntegerField()
 
+    def __str__(self):
+        return self.name
+
 class SkillCategory(models.Model):
     id = models.AutoField(primary_key = True)
     name = models.CharField(max_length = 125)
+
+    def __str__(self):
+        return self.name
 
 class Skill(models.Model):
     id = models.AutoField(primary_key = True)
@@ -81,6 +87,9 @@ class Skill(models.Model):
     hardSuccessLevel = models.PositiveSmallIntegerField(validators = [MaxValueValidator(99)])
     extremeSuccessLevel = models.PositiveSmallIntegerField(validators = [MaxValueValidator(99)])
 
+    def __str__(self):
+        return self.name
+
 class Job(models.Model):
     id = models.AutoField(primary_key = True)
     name = models.CharField(max_length = 125)
@@ -90,9 +99,15 @@ class Job(models.Model):
 
     reputation = models.PositiveSmallIntegerField(validators = [MaxValueValidator(99)])
 
+    def __str__(self):
+        return self.name
+
 class WeaponCategory(models.Model):
     id = models.AutoField(primary_key = True)
     name = models.CharField(max_length = 125)
+
+    def __str__(self):
+        return self.name
 
 class Weapon(models.Model):
     id = models.AutoField(primary_key = True)
@@ -108,3 +123,6 @@ class Weapon(models.Model):
     price = models.PositiveIntegerField()
     firmness = models.PositiveSmallIntegerField(validators=[MaxValueValidator(99)])
     presentEra = models.CharField(max_length = 125)
+
+    def __str__(self):
+        return self.name
