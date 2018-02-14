@@ -120,9 +120,6 @@ class Weapon(models.Model):
     isPiercingInjury = models.BooleanField()
     consecutiveLimit = models.PositiveSmallIntegerField(validators=[MaxValueValidator(99)])
     load = models.PositiveSmallIntegerField()
-    price = models.PositiveIntegerField()
-    firmness = models.PositiveSmallIntegerField(validators=[MaxValueValidator(99)])
-    presentEra = models.CharField(max_length = 125)
 
     def __str__(self):
         return self.name
