@@ -39,7 +39,7 @@ class Character(models.Model):
     # Basic Information
     name = models.CharField(max_length = 125)
     job = models.CharField(max_length = 125)
-    highestEducationLeval = models.CharField(max_length = 125)
+    highestEducationLevel = models.CharField(max_length = 125)
     era = models.CharField(max_length = 125)
     gender = models.CharField(max_length = 125)
     age = models.PositiveSmallIntegerField()
