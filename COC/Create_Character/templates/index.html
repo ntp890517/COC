@@ -1,10 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <meta charset="UTF-8">
     <title>COC</title>
+    <script>
+        function openCity(evt, cityName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the link that opened the tab
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+    }
+    </script>
 </head>
 <body>
+<nav class="navbar navbar-light bg-dark">
+  <a class="navbar-brand text-light" href="#">
+    <img src="/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+    Cthulhu Mythos 克蘇魯神話
+  </a>
+</nav>
+<div class="container" style="width: 1024px;height: 800px; background-color: coral;">
+    <div class="row">
+        <div class="col-2" style="padding: 0;margin: 0">
+            <button style="width: 100%">基本數值</button>
+            <button style="width: 100%">腳色檔案</button>
+            <button style="width: 100%">職業技能</button>
+            <button style="width: 100%">物品武器</button>
+            <button style="width: 100%">繼承項目</button>
+        </div>
+        <div class="col-10" style="padding: 0;margin: 0">
+            <div class="row" style="padding: 0;margin: 0">
+                <div class="col" style="padding: 0;margin: 0; background-color: #FCFFED;">
+                    <div>
+                        STR: <input type="text" name="str" style="width: 50%"><br>
+                        CON: <input type="text" name="con" style="width: 50%"><br>
+                        DEX: <input type="text" name="dex" style="width: 50%"><br>
+                        APP: <input type="text" name="app" style="width: 50%"><br>
+                        POW: <input type="text" name="pow" style="width: 50%"><br>
+                    </div>
+                    <div>
+                        INT: <input type="text" name="int" style="width: 50%"><br>
+                        SIZ: <input type="text" name="siz" style="width: 50%"><br>
+                        EDU: <input type="text" name="edu" style="width: 50%"><br>
+                    </div>
+                    <div>
+                        LUK: <input type="text" name="luk" style="width: 50%"><br>
+                    </div>
+                </div>
+                <div class="col" style="padding: 0;margin: 0; background-color: #FEF2FF;">
+                        <div>
+                            HP: <input type="text" name="hp" style="width: 50%"><br>
+                            MP: <input type="text" name="mp" style="width: 50%"><br>
+                            LUCK: <input type="text" name="luck" style="width: 50%"><br>
+                            SAN: <input type="text" name="san" style="width: 50%"><br>
+                        </div>
+                    </div>
+                <div class="col" style="padding: 0;margin: 0; background-color: #B4670F;">
+                        <div>
+                            Build: <input type="text" name="build" style="width: 50%"><br>
+                            DB: <input type="text" name="DB" style="width: 50%"><br>
+                            Move: <input type="text" name="move" style="width: 50%"><br>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
