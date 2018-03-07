@@ -16,3 +16,6 @@ def test(request):
 #    except Poll.DoesNotExist:
 #        raise Http404("Poll does not exist")
 #    return render(request, 'polls/detail.html', {'poll': p})
+
+def index(request):
+    return render(request, 'index.html')
