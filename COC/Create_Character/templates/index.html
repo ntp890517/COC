@@ -27,6 +27,24 @@
     }
     </script>
     <style>
+        .srlin-dice-area {
+            grid-area: d;
+        }
+        .srlin-value-col-1 {
+            grid-area: a;
+        }
+        .srlin-value-col-2 {
+            grid-area: b;
+        }
+        .srlin-value-col-3 {
+            grid-area: c;
+        }
+        .srlin-container {
+            display: grid;
+            grid-template-columns: auto 33% 33%;
+            grid-template-rows: 50% 50%;
+            grid-template-areas: "a b c" "a d d";
+        }
         .bs-callout {
             padding: 20px;
             margin: 20px 5px;
@@ -102,8 +120,8 @@
             <button style="width: 100%">繼承項目</button>
         </div>
         <div class="col-10" style="padding: 0;margin: 0">
-            <div class="row" style="padding: 0;margin: 0">
-                <div class="col-4" style="padding: 0;margin: 0;">
+            <div class="srlin-container">
+                <div class="srlin-value-col-1">
                     <div class="bs-callout bs-callout-danger" style="background-color: #CCCCCC;">
                         STR: <input type="text" name="str" style="width: 50%"><br>
                         CON: <input type="text" name="con" style="width: 50%"><br>
@@ -120,7 +138,7 @@
                         LUK: <input type="text" name="luk" style="width: 50%"><br>
                     </div>
                 </div>
-                <div class="col-4" style="padding: 0;margin: 0;">
+                <div class="srlin-value-col-2" >
                         <div  class="bs-callout bs-callout-default" style="background-color: #CCCCCC;">
                             HP: <input type="text" name="hp" style="width: 50%"><br>
                             MP: <input type="text" name="mp" style="width: 50%"><br>
@@ -128,13 +146,14 @@
                             SAN: <input type="text" name="san" style="width: 50%"><br>
                         </div>
                     </div>
-                <div class="col-4" style="padding: 0;margin: 0;">
+                <div class="srlin-value-col-3">
                         <div  class="bs-callout bs-callout-default" style="background-color: #CCCCCC;">
                             Build: <input type="text" name="build" style="width: 50%"><br>
                             DB: <input type="text" name="DB" style="width: 50%"><br>
                             Move: <input type="text" name="move" style="width: 50%"><br>
                         </div>
                 </div>
+                <div class="srlin-dice-area" style="background-color: #AAAAAA;">test</div>
             </div>
         </div>
     </div>
