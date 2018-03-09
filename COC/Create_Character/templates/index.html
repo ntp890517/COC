@@ -28,82 +28,6 @@
     evt.currentTarget.className += " active";
     }
     </script>
-    <style>
-        .srlin-dice-area {
-            grid-area: d;
-        }
-        .srlin-value-col-1 {
-            grid-area: a;
-        }
-        .srlin-value-col-2 {
-            grid-area: b;
-        }
-        .srlin-value-col-3 {
-            grid-area: c;
-        }
-        .srlin-container {
-            display: grid;
-            grid-template-columns: auto 33% 33%;
-            grid-template-rows: 200px auto;
-            grid-template-areas: "a b c" "a d d";
-        }
-        .bs-callout {
-            padding: 20px;
-            margin: 20px 5px;
-            border: 1px solid #eee;
-            border-left-width: 5px;
-            border-radius: 3px;
-        }
-        .bs-callout h4 {
-            margin-top: 0;
-            margin-bottom: 5px;
-        }
-        .bs-callout p:last-child {
-            margin-bottom: 0;
-        }
-        .bs-callout code {
-            border-radius: 3px;
-        }
-        .bs-callout+.bs-callout {
-            margin-top: -5px;
-        }
-        .bs-callout-default {
-            border-left-color: #777;
-        }
-        .bs-callout-default h4 {
-            color: #777;
-        }
-        .bs-callout-primary {
-            border-left-color: #428bca;
-        }
-        .bs-callout-primary h4 {
-            color: #428bca;
-        }
-        .bs-callout-success {
-            border-left-color: #5cb85c;
-        }
-        .bs-callout-success h4 {
-            color: #5cb85c;
-        }
-        .bs-callout-danger {
-            border-left-color: #d9534f;
-        }
-        .bs-callout-danger h4 {
-            color: #d9534f;
-        }
-        .bs-callout-warning {
-            border-left-color: #f0ad4e;
-        }
-        .bs-callout-warning h4 {
-            color: #f0ad4e;
-        }
-        .bs-callout-info {
-            border-left-color: #5bc0de;
-        }
-        .bs-callout-info h4 {
-            color: #5bc0de;
-        }
-    </style>
 </head>
 <body>
 <nav class="navbar navbar-light bg-dark">
@@ -112,19 +36,19 @@
     Cthulhu Mythos 克蘇魯神話
   </a>
 </nav>
-<div class="container" style="width: 1024px;height: 500px; background-color: #F7F7F9;">
+<div class="container main-container">
     <div class="row">
-        <div class="col-2" style="padding: 0;margin: 0">
-            <button class="btn btn-outline-primary" style="width: 95%; margin: 2px 0;">基本數值</button>
-            <button class="btn btn-outline-primary" style="width: 95%; margin: 2px 0;">腳色檔案</button>
-            <button class="btn btn-outline-primary" style="width: 95%; margin: 2px 0;">職業技能</button>
-            <button class="btn btn-outline-primary" style="width: 95%; margin: 2px 0;">物品武器</button>
-            <button class="btn btn-outline-primary" style="width: 95%; margin: 2px 0;">繼承項目</button>
+        <div class="col-2 no-padding-no-margin">
+            <button class="btn btn-outline-primary page-btn">基本數值</button>
+            <button class="btn btn-outline-primary page-btn">腳色檔案</button>
+            <button class="btn btn-outline-primary page-btn">職業技能</button>
+            <button class="btn btn-outline-primary page-btn">物品武器</button>
+            <button class="btn btn-outline-primary page-btn">繼承項目</button>
         </div>
-        <div class="col-10" style="padding: 0;margin: 0">
-            <div class="srlin-container">
-                <div class="srlin-value-col-1">
-                    <div class="bs-callout bs-callout-danger" style="background-color: #CCCCCC;">
+        <div class="col-10 no-padding-no-margin">
+            <div class="ba-grid-container">
+                <div class="ba-grid-col-1">
+                    <div class="bs-callout bs-callout-danger bg-gray">
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="inputGroup-STR">STR</span>
@@ -137,39 +61,38 @@
                                 <input type="email" class="form-control" id="inputCON" placeholder="體質">
                             </div>
                         </div>
-                        DEX: <input type="text" name="dex" style="width: 50%"><br>
-                        APP: <input type="text" name="app" style="width: 50%"><br>
-                        POW: <input type="text" name="pow" style="width: 50%"><br>
+                        DEX: <input type="text" name="dex" class="value-input"><br>
+                        APP: <input type="text" name="app" class="value-input"><br>
+                        POW: <input type="text" name="pow" class="value-input"><br>
                     </div>
-                    <div class="bs-callout bs-callout-warning" style="background-color: #CCCCCC;">
-                        INT: <input type="text" name="int" style="width: 50%"><br>
-                        SIZ: <input type="text" name="siz" style="width: 50%"><br>
-                        EDU: <input type="text" name="edu" style="width: 50%"><br>
+                    <div class="bs-callout bs-callout-warning bg-gray">
+                        INT: <input type="text" name="int" class="value-input"><br>
+                        SIZ: <input type="text" name="siz" class="value-input"><br>
+                        EDU: <input type="text" name="edu" class="value-input"><br>
                     </div>
-                    <div class="bs-callout bs-callout-success" style="margin-bottom: 0;background-color: #CCCCCC;">
-                        LUK: <input type="text" name="luk" style="width: 50%"><br>
+                    <div class="bs-callout bs-callout-success bg-gray">
+                        LUK: <input type="text" name="luk" class="value-input"><br>
                     </div>
                 </div>
-                <div class="srlin-value-col-2" >
-                        <div  class="bs-callout bs-callout-default" style="background-color: #CCCCCC;">
-                            HP: <input type="text" name="hp" style="width: 50%"><br>
-                            MP: <input type="text" name="mp" style="width: 50%"><br>
-                            LUCK: <input type="text" name="luck" style="width: 50%"><br>
-                            SAN: <input type="text" name="san" style="width: 50%"><br>
+                <div class="ba-grid-col-2" >
+                        <div  class="bs-callout bs-callout-default bg-gray">
+                            HP: <input type="text" name="hp" class="value-input"><br>
+                            MP: <input type="text" name="mp" class="value-input"><br>
+                            LUCK: <input type="text" name="luck" class="value-input"><br>
+                            SAN: <input type="text" name="san" class="value-input"><br>
                         </div>
                     </div>
-                <div class="srlin-value-col-3">
-                        <div  class="bs-callout bs-callout-default" style="background-color: #CCCCCC;">
-                            Build: <input type="text" name="build" style="width: 50%"><br>
-                            DB: <input type="text" name="DB" style="width: 50%"><br>
-                            Move: <input type="text" name="move" style="width: 50%"><br>
+                <div class="ba-grid-col-3">
+                        <div  class="bs-callout bs-callout-default bg-gray">
+                            Build: <input type="text" name="build" class="value-input"><br>
+                            DB: <input type="text" name="DB" class="value-input"><br>
+                            Move: <input type="text" name="move" class="value-input"><br>
                         </div>
                 </div>
-                <div class="srlin-dice-area" style="border-style: solid; border-width: 2px; border-color: #CCCCCC; border-radius: 5px;">DICE AREA</div>
+                <div class="ba-grid-dice-area">DICE AREA</div>
             </div>
         </div>
     </div>
 </div>
-<div class="test">haha test</div>
 </body>
 </html>
