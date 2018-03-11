@@ -60,6 +60,8 @@
     ba: base ability
 */
 .ba-grid-dice-area {
+    display:flex;
+    flex-direction:column;
     grid-area: d;
 
     margin-right: 5px;
