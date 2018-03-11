@@ -3,12 +3,45 @@
     padding-bottom: 10px;
     background-color: #F7F7F9;
 }
-.page-btn {
+.div-ability-property {
+    border-left-color: #f0ad4e;
+    border-style: solid;
+    border-width: 0 0 0 5px;
+    padding: 20px;
+    margin: 20px 5px;
+}
+.igrp-ability-property {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+.igrp-ability-property:last-of-type {
+    margin-bottom: 0;
+}
+.igrp-ability-property > label {
+    font-size: 26px;
+    font-style: bold;
+    width: 20%;
+    vertical-align: middle;
+}
+.igrp-ability-property > input {
+    border: 1px solid black;
+    background-color: #f7f7f9;
+    height: 100%;
+    margin-left: 30px;
+    padding: 6px 20px;
+    max-width: 50%;
+}
+.btn-catalog {
     width: 95%;
     margin: 2px 0;
 }
 .value-input {
-    width: 50%
+    width: 50%;
+}
+.value-input-sm {
+    max-width: 30%;
+}
 
 }
 .bg-gray {
@@ -50,7 +83,7 @@
 .ba-grid-container {
     display: grid;
     grid-template-columns: auto 33% 33%;
-    grid-template-rows: 200px auto;
+    grid-template-rows: 230px auto;
     grid-template-areas:
     "a b c"
     "a d d";
@@ -130,3 +163,4 @@ div .bs-callout:last-of-type {
     color: #5bc0de;
 
 }
+

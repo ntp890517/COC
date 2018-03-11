@@ -39,11 +39,11 @@
 <div class="container main-container">
     <div class="row">
         <div class="col-2 no-padding-no-margin">
-            <button class="btn btn-outline-primary page-btn">基本數值</button>
-            <button class="btn btn-outline-primary page-btn">腳色檔案</button>
-            <button class="btn btn-outline-primary page-btn">職業技能</button>
-            <button class="btn btn-outline-primary page-btn">物品武器</button>
-            <button class="btn btn-outline-primary page-btn">繼承項目</button>
+            <button class="btn btn-outline-primary btn-catalog">基本數值</button>
+            <button class="btn btn-outline-primary btn-catalog">腳色檔案</button>
+            <button class="btn btn-outline-primary btn-catalog">職業技能</button>
+            <button class="btn btn-outline-primary btn-catalog">物品武器</button>
+            <button class="btn btn-outline-primary btn-catalog">繼承項目</button>
         </div>
         <div class="col-10 no-padding-no-margin">
             <div class="ba-grid-container">
@@ -58,17 +58,26 @@
                         <div class="form-group row">
                             <label for="inputCON" class="col-sm-2 col-form-label">CON</label>
                             <div class="col-sm-10">
-                                <input type="email" class="form-control" id="inputCON" placeholder="體質">
+                                <input type="text" class="form-control" id="inputCON" placeholder="體質">
                             </div>
                         </div>
                         DEX: <input type="text" name="dex" class="value-input"><br>
                         APP: <input type="text" name="app" class="value-input"><br>
                         POW: <input type="text" name="pow" class="value-input"><br>
                     </div>
-                    <div class="bs-callout bs-callout-warning bg-gray">
-                        INT: <input type="text" name="int" class="value-input"><br>
-                        SIZ: <input type="text" name="siz" class="value-input"><br>
-                        EDU: <input type="text" name="edu" class="value-input"><br>
+                    <div class="div-ability-property">
+                        <div class="igrp-ability-property">
+                            <label for="inputINT">INT:</label>
+                            <input type="text" id="inputINT" placeholder="智力"><br>
+                        </div>
+                        <div class="igrp-ability-property">
+                            <label for="inputSIZ">SIZ:</label>
+                            <input type="text" id="inputSIZ" placeholder="體型"><br>
+                        </div>
+                        <div class="igrp-ability-property">
+                            <label for="inputEDU">EDU:</label>
+                            <input type="text" id="inputEDU" placeholder="教育"><br>
+                        </div>
                     </div>
                     <div class="bs-callout bs-callout-success bg-gray">
                         LUK: <input type="text" name="luk" class="value-input"><br>
@@ -76,10 +85,14 @@
                 </div>
                 <div class="ba-grid-col-2" >
                         <div  class="bs-callout bs-callout-default bg-gray">
-                            HP: <input type="text" name="hp" class="value-input"><br>
-                            MP: <input type="text" name="mp" class="value-input"><br>
-                            LUCK: <input type="text" name="luck" class="value-input"><br>
-                            SAN: <input type="text" name="san" class="value-input"><br>
+                            <label>HP:</label>
+                            <input type="text" name="hp" class="value-input-sm"> / <input type="text" name="hp" class="value-input-sm"><br>
+                            <label>MP:</label>
+                            <input type="text" name="mp" class="value-input-sm"> / <input type="text" name="mp" class="value-input-sm"><br>
+                            <label>LUCK:</label>
+                            <input type="text" name="luck" class="value-input-sm"> / <input type="text" name="luck" class="value-input-sm"><br>
+                            <label>SAN:</label>
+                            <input type="text" name="san" class="value-input-sm"> / <input type="text" name="san" class="value-input-sm"><br>
                         </div>
                     </div>
                 <div class="ba-grid-col-3">
