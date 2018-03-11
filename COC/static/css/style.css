@@ -1,65 +1,31 @@
-.main-container {
-    width: 1024px;
-    padding-bottom: 10px;
+.top-container {
     background-color: #F7F7F9;
+    margin: 0 auto;
+    max-width: 1140px;
+    padding: 0 15px 10px 15px;
+    width: 100%;
 }
-.div-ability-property {
-    border-left-color: #f0ad4e;
-    border-style: solid;
-    border-width: 0 0 0 5px;
-    padding: 20px;
-    margin: 20px 5px;
-}
-.igrp-ability-property {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 1rem;
-}
-.igrp-ability-property:last-of-type {
-    margin-bottom: 0;
-}
-.igrp-ability-property > label {
-    font-size: 26px;
-    font-style: bold;
-    width: 20%;
-    vertical-align: middle;
-}
-.igrp-ability-property > input {
-    border: 1px solid black;
-    background-color: #f7f7f9;
-    height: 100%;
-    margin-left: 30px;
-    padding: 6px 20px;
-    max-width: 50%;
-}
+
 .btn-catalog {
     width: 95%;
     margin: 2px 0;
 }
-.value-input {
-    width: 50%;
-}
-.value-input-sm {
-    max-width: 30%;
-}
 
+/* grid-1 layout */
+/* 1 2 3         */
+/* 1 4 4         */
+.grid-1 {
+    display: grid;
+    grid-template-columns: auto 33% 33%;
+    grid-template-rows: 230px auto;
+    grid-template-areas:
+    "a b c"
+    "a d d";
 }
-.bg-gray {
-    background-color: #CCCCCC;
-
-}
-.no-padding-no-margin {
-    padding: 0;
-    margin: 0;
-}
-.no-margin-bottom {
-    margin-bottom: 0px;
-}
-
-/*
-    ba: base ability
-*/
-.ba-grid-dice-area {
+.grid-1-region-1 { grid-area: a; }
+.grid-1-region-2 { grid-area: b; }
+.grid-1-region-3 { grid-area: c; }
+.grid-1-region-4 {
     display:flex;
     flex-direction:column;
     grid-area: d;
@@ -70,26 +36,44 @@
     border-color: #CCCCCC;
     border-radius: 5px
 }
-.ba-grid-col-1 {
-    grid-area: a;
 
+.property-group {
+    border-left-color: #f0ad4e;
+    border-style: solid;
+    border-width: 0 0 0 5px;
+    padding: 20px;
+    margin: 20px 5px;
 }
-.ba-grid-col-2 {
-    grid-area: b;
+.property-item {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+.property-item:last-of-type { margin-bottom: 0; }
+.property-item > label {
+    font-size: 26px;
+    font-style: bold;
+    width: 20%;
+    vertical-align: middle;
+}
+.property-item > input {
+    border: 1px solid black;
+    background-color: #f7f7f9;
+    height: 100%;
+    margin-left: 30px;
+    padding: 6px 20px;
+    max-width: 50%;
+}
 
-}
-.ba-grid-col-3 {
-    grid-area: c;
+.value-input { width: 50%; }
+.value-input-sm { max-width: 30%; }
 
+.bg-gray { background-color: #CCCCCC; }
+.no-padding-no-margin {
+    padding: 0;
+    margin: 0;
 }
-.ba-grid-container {
-    display: grid;
-    grid-template-columns: auto 33% 33%;
-    grid-template-rows: 230px auto;
-    grid-template-areas:
-    "a b c"
-    "a d d";
-}
+.no-margin-bottom { margin-bottom: 0px; }
 
 .bs-callout {
     padding: 20px;
@@ -102,65 +86,21 @@
     margin-top: 0;
     margin-bottom: 5px;
 }
-.bs-callout p:last-child {
-    margin-bottom: 0;
-
-}
-div .bs-callout:last-of-type {
-    margin-bottom: 0;
-}
-.bs-callout code {
-    border-radius: 3px;
-
-}
-.bs-callout+.bs-callout {
-    margin-top: -5px;
-
-}
-.bs-callout-default {
-    border-left-color: #777;
-
-}
-.bs-callout-default h4 {
-    color: #777;
-
-}
-.bs-callout-primary {
-    border-left-color: #428bca;
-
-}
-.bs-callout-primary h4 {
-    color: #428bca;
-
-}
-.bs-callout-success {
-    border-left-color: #5cb85c;
-
-}
-.bs-callout-success h4 {
-    color: #5cb85c;
-
-}
-.bs-callout-danger {
-    border-left-color: #d9534f;
-
-}
-.bs-callout-danger h4 {
-    color: #d9534f;
-
-}
-.bs-callout-warning {
-    border-left-color: #f0ad4e;
-
-}
-.bs-callout-warning h4 {
-    color: #f0ad4e;
-
-}
-.bs-callout-info {
-    border-left-color: #5bc0de;
-
-}
+.bs-callout p:last-child { margin-bottom: 0; }
+div .bs-callout:last-of-type { margin-bottom: 0; }
+.bs-callout code { border-radius: 3px; }
+.bs-callout+.bs-callout { margin-top: -5px; }
+.bs-callout-default { border-left-color: #777; }
+.bs-callout-default h4 { color: #777; }
+.bs-callout-primary { border-left-color: #428bca; }
+.bs-callout-primary h4 { color: #428bca; }
+.bs-callout-success { border-left-color: #5cb85c; }
+.bs-callout-success h4 { color: #5cb85c; }
+.bs-callout-danger { border-left-color: #d9534f;}
+.bs-callout-danger h4 { color: #d9534f; }
+.bs-callout-warning { border-left-color: #f0ad4e; }
+.bs-callout-warning h4 { color: #f0ad4e; }
+.bs-callout-info { border-left-color: #5bc0de; }
 .bs-callout-info h4 {
     color: #5bc0de;
 
