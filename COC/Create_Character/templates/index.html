@@ -5,30 +5,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{% static 'js/COC.js' %}"></script>
     <meta charset="UTF-8">
     <title>COC</title>
-    <script>
-    function openCatalog(evt, catalogName) {
-        // Declare all variables
-        var i, tabcontent, tablinks;
-
-        // Get all elements with class="tabcontent" and hide them
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-        }
-
-        // Get all elements with class="tablinks" and remove the class "active"
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-
-        // Show the current tab, and add an "active" class to the link that opened the tab
-        document.getElementById(catalogName).style.display = "block";
-        evt.currentTarget.className += " active";
-    }
-    </script>
 </head>
 <body>
 <nav class="navbar navbar-light bg-dark">
@@ -45,7 +25,7 @@
 <div class="top-container">
     <div class="row">
         <div class="col-2 no-padding-no-margin">
-            <button class="btn btn-outline-primary btn-catalog tablinks" onclick="openCatalog(event, 'catalog1')">基本數值</button>
+            <button class="btn btn-outline-primary btn-catalog tablinks" id="btnCat1" onclick="openCatalog(event, 'catalog1')">基本數值</button>
             <button class="btn btn-outline-primary btn-catalog tablinks" onclick="openCatalog(event, 'catalog2')">腳色檔案</button>
             <button class="btn btn-outline-primary btn-catalog tablinks" onclick="openCatalog(event, 'catalog3')">職業技能</button>
             <button class="btn btn-outline-primary btn-catalog tablinks" onclick="openCatalog(event, 'catalog4')">物品武器</button>
