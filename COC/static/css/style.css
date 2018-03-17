@@ -1,9 +1,6 @@
 .top-container {
-    background-color: #F7F7F9;
-    margin: 0 auto;
-    max-width: 1140px;
-    padding: 0 15px 10px 15px;
-    width: 100%;
+    background-color: #f7f7f9;
+    padding-bottom: 5px;
 }
 
 .btn-catalog {
