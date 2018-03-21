@@ -112,21 +112,25 @@
                             Move: <input id="input-move" type="text" name="move" class="value-input"><br>
                         </div>
                 </div>
-                <div class="grid-1-region-4">
-                    <div style="height: 50px; border: 1px solid red;">
-                        <button>
-                            <image src="{% static 'images/rolling-dices.png' %}" height="50" width="50"></image>
+                <div class="grid-1-region-4 border-right border-bottom">
+                    <div style="height: 50px;">
+                        <button class="btn btn-outline-secondary"> 擲骰子
+                            <!-- <image src="{% static 'images/rolling-dices.png' %}" height="50" width="50"></image> -->
                         </button>
                     </div>
-                    <div style="padding-left: 5%; padding-right 5%; border: 1px solid blue; height: 100%; padding: 10px 30px;">
-                        <div style="border: 1px solid black; height: 34%; padding: 5px 15px;">
+                    <div style="padding-left: 5%; padding-right 5%; height: 100%; padding: 10px 30px;">
+                        <div style="height: 34%; padding: 5px 15px;">
                             <label style="background-color: red; width: 75px; height: 25px; text-align: center; color: white;">45</label>
                             <label style="background-color: red; width: 75px; height: 25px; text-align: center; color: white;">55</label>
                             <label style="background-color: red; width: 75px; height: 25px; text-align: center; color: white;">30</label>
                             <label style="background-color: red; width: 75px; height: 25px; text-align: center; color: white;">60</label>
                         </div>
-                        <div style="height: 33%; background-color: #f0ad4e;">2D6 row</div>
-                        <div style="height: 33%; background-color: #5cb85c;">luck row</div>
+                        <div style="height: 33%; padding: 5px 15px;">
+                       <label style="background-color: #f0ad4e; width: 75px; height: 25px; text-align: center; color: white;">45</label>
+                        </div>
+                        <div style="height: 33%; padding: 5px 15px;">
+                            <label style="background-color: #5cb85c; width: 75px; height: 25px; text-align: center; color: white;">45</label>
+                        </div>
                     </div>
                 </div>
             </div>
