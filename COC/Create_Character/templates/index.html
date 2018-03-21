@@ -17,92 +17,92 @@
     Cthulhu Mythos 克蘇魯神話
   </a>
 </nav>
-<ul class="nav justify-content-end bg-darkgray">
+<ul class="nav justify-content-end bg-secondary">
     <li class="nav-item">
-        <a class="nav-link" href="#" style="color: white;">修改</a>
+        <a class="nav-link text-light" href="#" style="color: white;">修改</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#" style="color: white;">分享</a>
+        <a class="nav-link text-light" href="#" style="color: white;">分享</a>
     </li>
 </ul>
 <div class="container top-container">
     <div class="row">
         <div class="col-2">
-            <button class="btn btn-catalog btn-outline-primary tablinks" id="btnCat1" onclick="openCatalog(event, 'catalog1')">基本數值</button>
-            <button class="btn btn-catalog btn-outline-primary tablinks" id="btnCat2" onclick="openCatalog(event, 'catalog2')">角色檔案</button>
-            <button class="btn btn-catalog btn-outline-primary tablinks" id="btnCat3" onclick="openCatalog(event, 'catalog3')">職業技能</button>
-            <button class="btn btn-catalog btn-outline-primary tablinks" id="btnCat4" onclick="openCatalog(event, 'catalog4')">物品武器</button>
-            <button class="btn btn-catalog btn-outline-primary tablinks" id="btnCat5" onclick="openCatalog(event, 'catalog5')">繼承項目</button>
+            <button class="btn btn-catalog btn-outline-secondary tablinks" id="btnCat1" onclick="openCatalog(event, 'catalog1')">基本數值</button>
+            <button class="btn btn-catalog btn-outline-secondary tablinks" id="btnCat2" onclick="openCatalog(event, 'catalog2')">角色檔案</button>
+            <button class="btn btn-catalog btn-outline-secondary tablinks" id="btnCat3" onclick="openCatalog(event, 'catalog3')">職業技能</button>
+            <button class="btn btn-catalog btn-outline-secondary tablinks" id="btnCat4" onclick="openCatalog(event, 'catalog4')">物品武器</button>
+            <button class="btn btn-catalog btn-outline-secondary tablinks" id="btnCat5" onclick="openCatalog(event, 'catalog5')">繼承項目</button>
         </div>
         <div class="col-10 no-padding-no-margin">
             <div class="tabcontent" id="catalog1">
                 <div class="grid-1">
                 <div class="grid-1-region-1">
-                    <div class="bs-callout bs-callout-danger bg-gray">
+                    <div class="bs-callout bs-callout-danger">
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" id="inputGroup-STR">STR</span>
+                                <span class="input-group-text" id="inputGroup-STR">力量</span>
                             </div>
-                            <input id="input-str" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-STR" placeholder="力量">
+                            <input id="input-str" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-STR" placeholder="STR">
                         </div>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" id="inputGroup-CON">CON</span>
+                                <span class="input-group-text" id="inputGroup-CON">體質</span>
                             </div>
-                            <input id="input-con" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-CON" placeholder="體質">
+                            <input id="input-con" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-CON" placeholder="CON">
                         </div>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" id="inputGroup-DEX">DEX</span>
+                                <span class="input-group-text" id="inputGroup-DEX">敏捷</span>
                             </div>
-                            <input id="input-dex" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-DEX" placeholder="靈巧">
+                            <input id="input-dex" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-DEX" placeholder="DEX">
                         </div>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" id="inputGroup-APP">APP</span>
+                                <span class="input-group-text" id="inputGroup-APP">外貌</span>
                             </div>
-                            <input id="input-app" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-APP" placeholder="外表" disabled>
+                            <input id="input-app" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-APP" placeholder="APP">
                         </div>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" id="inputGroup-POW">POW</span>
+                                <span class="input-group-text" id="inputGroup-POW">意志</span>
                             </div>
-                            <input id="input-pow" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-POW" placeholder="能力" disabled>
+                            <input id="input-pow" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-POW" placeholder="POW">
                         </div>
                     </div>
                     <div class="property-group">
                         <div class="property-item">
-                            <label for="inputINT">INT:</label>
-                            <input id="input-int" type="text" id="inputINT" placeholder="智力"><br>
+                            <label for="inputINT">智力</label>
+                            <input id="input-int" type="text" id="inputINT" placeholder="INT"><br>
                         </div>
                         <div class="property-item">
-                            <label for="inputSIZ">SIZ:</label>
-                            <input id="input-siz" type="text" id="inputSIZ" placeholder="體型"><br>
+                            <label for="inputSIZ">體型</label>
+                            <input id="input-siz" type="text" id="inputSIZ" placeholder="SIZE"><br>
                         </div>
                         <div class="property-item">
-                            <label for="inputEDU">EDU:</label>
-                            <input id="input-edu" type="text" id="inputEDU" placeholder="教育"><br>
+                            <label for="inputEDU">教育</label>
+                            <input id="input-edu" type="text" id="inputEDU" placeholder="EDU"><br>
                         </div>
                     </div>
-                    <div class="bs-callout bs-callout-success bg-gray">
-                        <div class="form-group row">
-                            <label for="inputLUK" class="col-sm-2 col-form-label">LUK</label>
-                            <div class="col-sm-10">
-                                <input id="input-luk" type="text" class="form-control" id="inputLUK" placeholder="幸運">
+                    <div class="bs-callout bs-callout-success">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroup-LUK">幸運</span>
                             </div>
+                            <input id="input-str" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-LUK" placeholder="LUK">
                         </div>
                     </div>
                 </div>
                 <div class="grid-1-region-2" >
                         <div  class="bs-callout bs-callout-default bg-gray">
                             <label>HP:</label>
-                            <input id="input-curr-hp" type="text" name="hp" class="value-input-sm"> / <input id="input-max-hp" type="text" name="hp" class="value-input-sm"><br>
+                            <input id="input-max-hp" type="text" name="hp" class="value-input-sm"><br>
                             <label>MP:</label>
-                            <input id="input-curr-mp" type="text" name="mp" class="value-input-sm"> / <input id="input-max-mp" type="text" name="mp" class="value-input-sm"><br>
-                            <label>LUCK:</label>
-                            <input id="input-curr-luck" type="text" name="luck" class="value-input-sm"> / <input id="input-max-luck" type="text" name="luck" class="value-input-sm"><br>
-                            <label>SAN:</label>
-                            <input id="input-curr-san" type="text" name="san" class="value-input-sm"> / <input id="input-max-san" type="text" name="san" class="value-input-sm"><br>
+                            <input id="input-max-mp" type="text" name="mp" class="value-input-sm"><br>
+                            <label>Luck:</label>
+                            <input id="input-max-luck" type="text" name="luck" class="value-input-sm"><br>
+                            <label>Sanity:</label>
+                            <input id="input-max-san" type="text" name="san" class="value-input-sm"><br>
                         </div>
                     </div>
                 <div class="grid-1-region-3">
