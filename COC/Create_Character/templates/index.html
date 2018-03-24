@@ -63,29 +63,35 @@
                             </div>
                             <input id="input-app" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-APP" placeholder="APP">
                         </div>
-                        <div class="input-group mb-3">
+                        <div class="input-group mb-0">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="inputGroup-POW">意志</span>
                             </div>
                             <input id="input-pow" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-POW" placeholder="POW">
                         </div>
                     </div>
-                    <div class="property-group">
-                        <div class="property-item">
-                            <label for="inputINT">智力</label>
-                            <input id="input-int" type="text" id="inputINT" placeholder="INT"><br>
+                    <div class="bs-callout bs-callout-warning">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroup-INT">智力</span>
+                            </div>
+                            <input id="input-str" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-INT" placeholder="INT">
                         </div>
-                        <div class="property-item">
-                            <label for="inputSIZ">體型</label>
-                            <input id="input-siz" type="text" id="inputSIZ" placeholder="SIZE"><br>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroup-SIZ">體型</span>
+                            </div>
+                            <input id="input-str" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-SIZ" placeholder="SIZE">
                         </div>
-                        <div class="property-item">
-                            <label for="inputEDU">教育</label>
-                            <input id="input-edu" type="text" id="inputEDU" placeholder="EDU"><br>
+                        <div class="input-group mb-0">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroup-EDU">教育</span>
+                            </div>
+                            <input id="input-str" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-EDU" placeholder="EDU">
                         </div>
                     </div>
                     <div class="bs-callout bs-callout-success">
-                        <div class="input-group mb-3">
+                        <div class="input-group mb-0">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="inputGroup-LUK">幸運</span>
                             </div>
@@ -94,17 +100,33 @@
                     </div>
                 </div>
                 <div class="grid-1-region-2" >
-                        <div  class="bs-callout bs-callout-default bg-gray">
-                            <label>HP:</label>
-                            <input id="input-max-hp" type="text" name="hp" class="value-input-sm"><br>
-                            <label>MP:</label>
-                            <input id="input-max-mp" type="text" name="mp" class="value-input-sm"><br>
-                            <label>Luck:</label>
-                            <input id="input-max-luck" type="text" name="luck" class="value-input-sm"><br>
-                            <label>Sanity:</label>
-                            <input id="input-max-san" type="text" name="san" class="value-input-sm"><br>
+                    <div  class="bs-callout bs-callout-default bg-gray">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroup-HP">生命值</span>
+                            </div>
+                            <input id="input-str" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-HP" placeholder="HP">
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroup-MP">魔力值</span>
+                            </div>
+                            <input id="input-str" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-MP" placeholder="MP">
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroup-LUCK">幸運值</span>
+                            </div>
+                            <input id="input-str" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-LUCK" placeholder="LUCK">
+                        </div>
+                        <div class="input-group mb-0">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroup-SAN">理智值</span>
+                            </div>
+                            <input id="input-str" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-SAN" placeholder="SAN">
                         </div>
                     </div>
+                </div>
                 <div class="grid-1-region-3">
                         <div  class="bs-callout bs-callout-default bg-gray">
                             Build: <input id="input-build" type="text" name="build" class="value-input"><br>
