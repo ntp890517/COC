@@ -11,36 +11,34 @@ function openCatalog(evt, catalogName) {
 }
 
 function rollOneDice() {
-return Math.ceil(Math.random()*6)
+    return Math.ceil(Math.random() * 6);
 }
 
 function rollThreeDice() {
-return rollOneDice()+rollOneDice()+rollOneDice()
+    return rollOneDice() + rollOneDice() + rollOneDice();
 }
 
 function rollTwoDicePlus6 () {
-return rollOneDice()+rollOneDice()+6
+    return rollOneDice() + rollOneDice() + 6;
 }
 
 
 $( document ).ready(function() {
     $( "#btnCat1" ).click();
     $(".label-dice").css("display", "none");
-    $("#roll-dice").click(
-    function() {
-    $("#D1-1").text((rollThreeDice()*5).toString()).css("display", "inline-block");
-    $("#D1-2").text((rollThreeDice()*5).toString()).css("display", "inline-block");
-    $("#D1-3").text((rollThreeDice()*5).toString()).css("display", "inline-block");
-    $("#D1-4").text((rollThreeDice()*5).toString()).css("display", "inline-block");
-    $("#D1-5").text((rollThreeDice()*5).toString()).css("display", "inline-block");
-    $("#D1-6").text((rollThreeDice()*5).toString()).css("display", "inline-block");
-    $("#D1-7").text((rollThreeDice()*5).toString()).css("display", "inline-block");
-    $("#D2-1").text((rollTwoDicePlus6()*5).toString()).css("display", "inline-block");
-    $("#D2-2").text((rollTwoDicePlus6()*5).toString()).css("display", "inline-block");
-    $("#D2-3").text((rollTwoDicePlus6()*5).toString()).css("display", "inline-block");
-    $("#D2-4").text((rollTwoDicePlus6()*5).toString()).css("display", "inline-block");
-    $("#D3-1").text((rollThreeDice()*5).toString()).css("display", "inline-block");
-    $("#D3-2").text((rollThreeDice()*5).toString()).css("display", "inline-block");
+    $("#roll-dice").click(function() {
+        for (i = 1; i <= 7; i++) {
+            $("#D1-" + i.toString()).text((rollThreeDice() * 5).toString())
+                                    .css("display", "inline-block");
+        }
+        for (i = 1; i <= 4; i++) {
+            $("#D2-" + i.toString()).text((rollTwoDicePlus6() * 5).toString())
+                                    .css("display", "inline-block");
+        }
+        for (i = 1; i <= 2; i++) {
+            $("#D3-" + i.toString()).text((rollThreeDice() * 5).toString())
+                                    .css("display", "inline-block");
+        }
     });
 
 });
