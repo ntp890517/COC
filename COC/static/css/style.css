@@ -104,6 +104,21 @@ div .bs-callout:last-of-type { margin-bottom: 0; }
 .bs-callout-info { border-left-color: #5bc0de; }
 .bs-callout-info h4 {
     color: #5bc0de;
-
 }
 
+.label-dice-disabled { background-color: black; }
+.label-dice {
+    width: 75px;
+    height: 25px;
+    text-align: center;
+    color: white;
+}
+.label-dice-d1 {
+    background-color: red;
+}
+.label-dice-d2 {
+    background-color: #f0ad4e;
+}
+.label-dice-d3 {
+    background-color: #5cb85c;
+}
